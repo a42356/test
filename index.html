@@ -1,0 +1,779 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>中友百貨X中友購物網|百貨精選|線上購物</title>
+  <meta name="description" content="百貨直購，中友購物網帶給消費者更多元服務，線上逛百貨 免運購輕鬆。">
+  <meta name="keywords" content="中友,中友購物,線上百貨,專櫃精品,線上購物,專櫃品牌,時尚,潮流">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1">
+  <link rel="icon" type="image/icon" href="favicon.png">
+  <!-- 運用在區塊出現動畫 -->
+  <link href="css/animate.css" rel="stylesheet">
+  <!-- 滑動效果的樣式 -->
+  <link href="css/slick.css" rel="stylesheet">
+  <link href="css/slick-theme.css" rel="stylesheet">
+  <!-- Loading畫面 -->
+  <link href="css/loading-style.css" rel="stylesheet">
+  <!-- 主要 -->
+  <!-- <link href="css/main.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="sass/main.css">
+
+  <!--VUE-->
+  <script src="https://vuejs.org/js/vue.min.js" type="text/javascript"></script>
+  <!-- APP回上一頁及TOP樣式 -->
+  <style>
+.scroll-mobile {
+	z-index: 1 !important;
+	position: fixed;
+	right: 10px;
+	width: 50px;
+	height: auto;
+	opacity: 0.4;
+	cursor: pointer;
+	text-align: center;
+	vertical-align: middle;
+	color: #fff;
+	font-size: 13px;
+	font-family: '微軟正黑體';
+}
+.scroll-mobile a {
+	display: block;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 25px;
+	color: #fff;
+	cursor: pointer;
+	text-align: center;
+	vertical-align: middle;
+}
+.toTop {
+	font-family: Arial, Helvetica, sans-serif;
+	background: #4d66a2;
+	color: #fff;
+	text-decoration: none !important;
+}
+.toTop:hover {
+	color: #ccc;
+}
+.connection {
+	display: block;
+	width: 15px;
+	height: 15px;
+	border-radius: 15px;
+	border: 4px solid #4d66a2;
+	opacity: 0.4;
+	margin: 5px 0px 5px 17px;
+}
+.scroll-mobile-ios {
+	top: 55%;
+}
+.scroll-mobile-android {
+	right: 20px !important;
+	bottom: 50px !important;
+	top: inherit !important;
+}
+.goback-mobile-android {
+	background: #000;
+}
+.goback-mobile-ios {
+	background: #000;
+}
+.dm .dm-product .block {
+	box-sizing: border-box;
+	padding: 10px;
+	margin: 0px;
+	height: initial;
+	background: transparent;
+}
+.dm .dm-product .block a {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	height: 294px;
+	background-color: #fff;
+}
+.photo .carousel .item, .floor .visualization {
+	height: 380px;
+}
+.floor .sort .product-block .commodity .block a img {
+	width: 90%;
+	height: auto;
+}
+.floor .sort .product-block .commodity .block {
+	height: auto!important;
+	padding: 40px 0px 40px 0px;
+}
+.floor .floor-frame {
+	overflow: hidden;
+}
+
+@media screen and (max-width: 769px) {
+.floor .sort .product-block .commodity .block {
+	vertical-align: top;
+	height: auto;
+	margin-bottom: 10px;
+	padding: 5px 0 5px 0;
+	display: inline-block;
+	width: calc(100% / 2 );
+	width: expression(100% / 2 );
+}
+.slick-block .block:nth-child(even) {
+	border-right: 0px !important;
+}
+}
+
+@media screen and (max-width: 480px) {
+.floor .sort {
+	padding: 50px 0;
+}
+.floor .sort .product-block .commodity .block a img {
+	width: 90%;
+	margin: 10px auto 5px auto;
+	height: auto;
+}
+.floor .floor-frame {
+	height: 100px;
+}
+}
+</style>
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })
+      (window, document, 'script', 'dataLayer', 'GTM-W3NJRQ');
+  </script>
+
+  <!-- End Google Tag Manager -->
+  </head>
+
+  <body >
+    <div id="vuejsall">
+
+<!-- APP回上一頁及TOP --> 
+<script type="text/javascript">
+    var ismobile = (/webOS|iPhone|iPad|iPod/i.test(navigator.userAgent));
+    if (ismobile) {
+      document.write('<div class="scroll-mobile-ios scroll-mobile goback-mobile-noshow"><a href="#" class="toTop"><strong>︿</strong>Top</a><span class="connection"></span><a class="goback-mobile-ios" onclick="goBackios()">回上頁</a></div>');
+    }
+
+    function goBackios() {
+      window.history.back();
+    }
+
+    var ismobile = (/Android|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+    if (ismobile) {
+      document.write('<div class="scroll-mobile-android scroll-mobile goback-mobile-noshow"><a href="#" class="toTop"><strong>︿</strong>Top</a><span class="connection"></span><a class="goback-mobile-android" onclick="goBackios()">回上頁</a></div>');
+    }
+
+    function goBackandroid() {
+      window.history.back();
+    }
+  </script> 
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3NJRQ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+
+<!-- End Google Tag Manager (noscript) --> 
+
+<!-- Loading畫面 -->
+<div class="loading">
+    <div class="internal">
+    <div class="logo-image">
+        <div class="container">
+        <div class="overlay"></div>
+        <img src="images/loading-logo.png"> </div>
+      </div>
+    <div class="wrapper">
+        <div class="line line1"> <span class="circle circle-top"></span>
+        <div class="dotted"> <span class="dot dot-middle-top"></span> <span class="dot dot-middle-bottom"></span> </div>
+        <span class="circle circle-bottom"></span> </div>
+        <div class="line line2"> <span class="circle circle-top"></span>
+        <div class="dotted"> <span class="dot dot-middle-top"></span> <span class="dot dot-middle-bottom"></span> </div>
+        <span class="circle circle-bottom"></span> </div>
+        <div class="line line3"> <span class="circle circle-top"></span>
+        <div class="dotted"> <span class="dot dot-middle-top"></span> <span class="dot dot-middle-bottom"></span> </div>
+        <span class="circle circle-bottom"></span> </div>
+        <div class="line line4"> <span class="circle circle-top"></span>
+        <div class="dotted"> <span class="dot dot-middle-top"></span> <span class="dot dot-middle-bottom"></span> </div>
+        <span class="circle circle-bottom"></span> </div>
+        <div class="line line5"> <span class="circle circle-top"></span>
+        <div class="dotted"> <span class="dot dot-middle-top"></span> <span class="dot dot-middle-bottom"></span> </div>
+        <span class="circle circle-bottom"></span> </div>
+        <div class="line line6"> <span class="circle circle-top"></span>
+        <div class="dotted"> <span class="dot dot-middle-top"></span> <span class="dot dot-middle-bottom"></span> </div>
+        <span class="circle circle-bottom"></span> </div>
+        <div class="line line7"> <span class="circle circle-top"></span>
+        <div class="dotted"> <span class="dot dot-middle-top"></span> <span class="dot dot-middle-bottom"></span> </div>
+        <span class="circle circle-bottom"></span> </div>
+        <div class="line line8"> <span class="circle circle-top"></span>
+        <div class="dotted"> <span class="dot dot-middle-top"></span> <span class="dot dot-middle-bottom"></span> </div>
+        <span class="circle circle-bottom"></span> </div>
+      </div>
+  </div>
+  </div>
+
+<!-- 手機版頂層 -->
+<div class="phone-header"> <a href="https://www.chung-yo.com/" title="前往中友購物網"> <img src="images/logo.png"> </a>
+    <div class="nav-button"> <img src="images/nav.png"> </div>
+    <div class="nav-button float"> <img src="images/nav-float.png"> </div>
+  </div>
+
+<!-- 左側選單 -->
+<div class="nav">
+    <div class="close"> <img src="images/mcross.png"> </div>
+    <div class="all-floor-button">
+    <div class="floor-button floor-index"> <span class="phone-name"> <a href="https://www.chung-yo.com/" title="前往中友購物網">中友購物網</a> </span> </div>
+    <!--
+    <div class="floor-button floor-dm dm-button" data-href="dm">
+        <div class="floor-line"></div>
+        <span class="number">DM</span> <span class="name">DM</span> <span class="phone-name">DM同步</span> </div>
+-->
+    <div class="floor-button floor-makeup" data-href="makeup">
+        <div class="floor-line"></div>
+        <span class="number">01</span> <span class="name">化妝品</span> </div>
+    <div class="floor-button floor-fashions" data-href="fashions">
+        <div class="floor-line"></div>
+        <span class="number">02</span> <span class="name">名品</span> </div>
+    <div class="floor-button floor-clothing" data-href="clothing">
+        <div class="floor-line"></div>
+        <span class="number">03</span> <span class="name">服飾/配件</span> </div>
+    <div class="floor-button floor-sport" data-href="sport">
+        <div class="floor-line"></div>
+        <span class="number">04</span> <span class="name">休運/男裝</span> </div>
+    <div class="floor-button floor-kids" data-href="kids">
+        <div class="floor-line"></div>
+        <span class="number">05</span> <span class="name">婦幼親子</span> </div>
+    <div class="floor-button floor-kids2" data-href="kids2">
+        <div class="floor-line"></div>
+        <span class="number">06</span> <span class="name">內睡衣</span> </div>    
+    <div class="floor-button floor-homeneeds" data-href="homeneeds">
+        <div class="floor-line"></div>
+        <span class="number">07</span> <span class="name">3C/家用</span> </div>
+    <div class="floor-button floor-food" data-href="food">
+        <div class="floor-line"></div>
+        <span class="number">08</span> <span class="name">食品/Jasons</span> </div>
+    <div class="floor-button top js-top">
+        <div class="floor-line"></div>
+        <span class="number">TOP</span> <span class="name">TOP</span> </div>
+  </div>
+  </div>
+<!-- 標頭活動訊息 -->
+<div class="header wow fadeInDown" data-wow-delay="0.4s"> <a href="https://www.chung-yo.com/promotion/2676">線上777元折價券現買現折，滿額點數狂飆送→</a> </div>
+
+<!-- Banner -->
+<div class="all wow fadeInDown" data-wow-delay="0.4s">
+    <!-- 電腦版 -->
+    <div class="banner desktop-banner">
+    <div class="carousel" id="banner-item">
+       <!--banner 物件-->
+      <banner-item v-for="item in banneritem" v-bind:todo="item" v-bind:key="item.id" ></banner-item>
+       <!--banner 物件 end-->
+      </div>
+    <div class="background"> <a href="https://www.chung-yo.com/" title="前往中友購物網"> <img src="images/banner/banner-logo.png"> </a> </div>
+  </div>
+    <!-- 手機版 -->
+    <div class="banner phone-banner">
+    <div class="carousel">
+      <!--banner 手機板 物件-->
+        <banner-item-m v-for="item in banneritemm" v-bind:todo="item" v-bind:key="item.id" ></banner-item-m>
+      <!--banner 手機板 物件 end-->  
+      </div>
+  </div>
+  </div>
+
+<!-- TAG搜尋 -->
+<div class="search">
+    <div class="scroll wow fadeInDown" data-wow-delay="0.8s">
+    <div class="icon-scroll"></div>
+  </div>
+    <div class="scroll-line wow fadeInDown" data-wow-delay="1.0s"></div>
+    <div class="search-tag wow fadeInDown" data-wow-delay="0.8s">
+    <div class="title">熱門品牌</div>
+    <div class="tag">
+      <span data-id="fashions" alt="名品">Samsonite</span>
+      <span data-id="kids" alt="童裝">chicco</span>
+      <span data-id="clothing" alt="服飾配件">Benteau</span>
+      <span data-id="kids2" alt="內睡衣">Audrey奧黛莉</span>
+      <span data-id="homeneeds" alt="3C/家用">安妮莎琳</span>
+      <span data-id="sport" alt="休運/男裝">Timberland</span> 
+      <span data-id="makeup" alt="化妝品">CLINIQUE</span>   
+      <span data-id="food" alt="食品">GODIVA</span> 
+
+      
+    </div>
+
+    <div class="search-form">
+        <input type="text" class="search-input" placeholder="品牌搜尋">
+        <img src="images/search.png" class="search-button">
+        <button class="button search-button">search</button>
+      </div>
+  </div>
+  </div>
+
+<!-- 百貨圖片 -->
+<div class="photo">
+    <div class="carousel">
+    <div class="item" style="background-image: url('images/photo/photo-exterior.jpg')"></div>
+    <div class="item" style="background-image: url('images/photo/photo-toilet1.jpg')"></div>
+    <div class="item" style="background-image: url('images/photo/photo-toilet2.jpg')"></div>
+  </div>
+  </div>
+
+<!-- 化妝品 -->
+<div class="floor"> 
+    <!-- 手機形象圖 -->
+    <div class="floor-frame">
+    <div class="floor-images floor1-image" style="background-image: url('images/floor1/big_picture.jpg')"></div>
+  </div>
+    <!-- TAG -->
+    <div class="spacer" id="makeup" data-index="kanebo kose clinique sk-ii sk ii sk2 laura mercier elizabeth arden estee lauder laneige rmk shiseido 東京櫃 clinique 瑰柏翠 萬寶龍 化妝品 anna sui berji biotherm bobbi brown bonanza 寶藝 burt's beecanus 肯拿士 ciaté 夏緹 clarinsclé de peau beautéclniqueconielizabeth arden estee laudere ttusais 艾杜紗 everose 愛芙蓉 giorgio armaniglamglowipsajill stuart jurlique  kiehl's 契爾氏 kosekryolan 歌劇魅影 lancome la mer laneige laura mercier legere 蘭吉兒 l’occitane 歐舒丹 m.a.c melvita momus ms.elec 米嬉樂nars origins 品木宣言 perth's key 栢司金 philosophy rmk shiseido東京櫃 shiseido 國際櫃 sk-ii su:m37 the body shop 后施巴 鋒恩香水 顏皙美姬 3INA CLARINS克蘭詩 BIOTHERM碧兒泉 KOSE"></div>
+    <div class="sort sort-first">
+    <div class="sort-image"> <img src="images/floor1/image.jpg"> </div>
+    <div class="chop">
+        <div class="sort-line"></div>
+        <div class="sort-title">
+        <div class="umber">01</div>
+        <div class="title-name">化妝品</div>
+        <div class="tag"> <span>美肌養成，全方位守護您的美肌，讓您由內美到外！</span> </div>
+      </div>
+        <!-- 品牌LOGO -->
+        <div class="chop-block">
+        <div class="font">Makeup & Skin Care</div>
+        <div class="logo">
+          <!--化妝品熱門類別-->
+          
+            <makeuptype-item  v-for="item in makeuptypeitem" v-bind:todo="item" v-bind:key="item.id"></makeuptype-item>
+
+          <!--化妝品熱門類別end-->
+          </div>
+        <!-- 品牌一覽按鈕 -->
+        <div class="button brand-list"> <a href="https://www.chung-yo.com/Product/Division/6" target="_blank">更多商品</a> </div>
+        <!-- 品牌一覽跳出視窗 -->
+        <div class="modal">
+            <div class="remove"> <img src="images/mcross.png"> </div>
+            <div class="title">品牌一覽</div>
+            <div class="category">
+            <div class="subtitle">化妝品</div>
+            <div class="tag"> <a href="" class="modal-button">SHISEIDO東京櫃</a> <a href="" class="modal-button">伊聖詩</a> <a href="" class="modal-button">SHISEIDO東京櫃</a> <a href="" class="modal-button">伊聖詩</a> <a href="" class="modal-button">SHISEIDO東京櫃</a> <a href="" class="modal-button">伊聖詩</a> </div>
+          </div>
+          </div>
+      </div>
+      </div>
+    <!-- 化妝品產品 -->
+    <div class="product-block">
+        <div class="commodity">
+        <div class="slick-block"> 
+            <!-- 化妝品更新 -->
+
+            <skincare-item v-for="item in skincareitem" v-bind:todo="item" v-bind:key="item.id"></skincare-item>
+
+            <!-- 化妝品更新 -end--> 
+          </div>
+      </div>
+      </div>
+    <div class="commodity-line"></div>
+  </div>
+    <!-- 名品形象大圖 -->
+    <div class="visualization" style="background-image: url(images/floor2/big_picture.jpg)" ></div>
+  </div>
+
+<!-- 名品 -->
+<div class="floor"> 
+    <!-- 手機形象圖 -->
+    <div class="floor-frame">
+    <div class="floor-images floor2-image" style="background-image: url('images/floor2/big_picture.jpg')"></div>
+  </div>
+    <!-- TAG -->
+    <div class="spacer" id="fashions" data-index="anna sui hannfort 今生金飾 sj&j fossil gloria coccinelle tree house gloria peatrees chloe samsonite agnesb braun buffelcoachgucciissey miyakemore dw citizen fossilck seiko agnes b.braun buffelcoachgucciissey miyakelongchampmichael korsmarc jacobspradapaul hewittrebecca minkoff ALDO PANDORA 盧亞香水"></div>
+    <div class="sort">
+    <div class="sort-image"> <img src="images/floor2/image.jpg"> </div>
+    <div class="chop">
+        <div class="sort-line"></div>
+        <div class="sort-title">
+        <div class="umber">02</div>
+        <div class="title-name">名品</div>
+        <div class="tag"> <span>不只是精品購物，也是時尚品味，更是生活藝術！</span> </div>
+      </div>
+        <!-- 品牌LOGO -->
+        <div class="chop-block">
+        <div class="font">International Fashions</div>
+        <!-- <div class="logo three-logo">
+            <div class="logo-block left bottom no-bottom">
+            <div class="logo-line"></div>
+            <a href="https://www.chung-yo.com/Search/Result?keyword=SJ%26J&" title="更多SJ&J商品">SJ&J</a> </div>
+            <div class="logo-block phone-left bottom no-bottom">
+            <div class="logo-line"></div>
+            <a href="https://www.chung-yo.com/Search/Result?keyword=FOSSIL&" title="更多FOSSIL商品">FOSSIL</a> </div>
+            <div class="logo-block phone-left bottom">
+            <div class="logo-line"></div>
+            <a href="https://www.chung-yo.com/Search/Result?keyword=Gloria&" title="更多Gloria商品">Gloria</a> </div>
+          </div> -->
+        
+        <div class="logo">
+         
+          <!--名品熱門類別-->
+          <internationaltype-item v-for="item in internationaltypeitem" v-bind:todo="item" v-bind:key="item.id"></internationaltype-item>
+          <!--名品熱門類別end-->
+
+        </div>
+        <!-- 品牌一覽按鈕 -->
+        <div class="button brand-list"> <a href="https://www.chung-yo.com/Product/Division/8" target="_blank">更多商品</a> </div>
+      </div>
+      </div>
+    <!-- 名品產品 -->
+    <div class="product-block">
+        <div class="commodity">
+        <div class="slick-block"> 
+            <!-- 名品更新 -->
+
+            <international-item v-for="item in internationalitem" v-bind:todo="item" v-bind:key="item.id"></international-item>
+
+            <!-- 名品更新 -end--> 
+          </div>
+      </div>
+      </div>
+    <div class="commodity-line"></div>
+  </div>
+    <!-- 服飾形象大圖-->
+    <div class="visualization" style="background-image: url('images/floor3/big_picture.jpg')"></div>
+  </div>
+<!-- 服飾形象大圖--> 
+
+<!-- 服飾 -->
+<div class="floor"> 
+    <!-- 手機形象圖 -->
+    <div class="floor-frame">
+    <div class="floor-images floor3-image" style="background-image: url('images/floor3/big_picture.jpg')"></div>
+  </div>
+    <!-- TAG -->
+    <div class="spacer" id="clothing" data-index="the89 playboy annalee cumar mestiere deas cilocala brappers gozo 0918 密絲黛瑞 minigold mia guess fossil sisley 奇威keywear benpin midiliya guess kinaz porter lynx super golf 冰山袋鼠 american bluedeerarnold palmer aurdrey 奧黛莉 baker street 貝克街 bear twobenteaubis in deibig trainbobsonbo derekb.t.rosebrapperscalifornia repubic cumardailofashion libraryfossilfraasguessjessica redkiss kissladies 蕾黛絲magymaru.amiryokumilidamoss clubodbopeanuts 花生漫畫 playboy包 pomelo koreasatanasloggiswear 思薇爾 tino bellinitriumph 黛安芬 uni weatherwacoal 華歌爾 yunique backyard 密絲黛瑞 PLAYBOY BRAPPERS UMAR包 American Uni Weat bear twoPLAYBOY BRAPPERS UMAR包 American Uni Weat bear two BENETTON MANGO E hyphen gallery non-stop m3 ROBERTA DI CAMERINO 4F B.T Rose 名人 奧可那 pierre cardin ERaMIE BROADWAY kila kila H2O California Republic"></div>
+    <div class="sort">
+    <div class="sort-image"> <img src="images/floor3/image.jpg"> </div>
+    <div class="chop">
+        <div class="sort-line"></div>
+        <div class="sort-title">
+        <div class="umber">03</div>
+        <div class="title-name">服飾/配件</div>
+        <div class="tag"> <span>打造屬於您的風格時尚，以新衣喚醒沉睡已久心情</span> </div>
+      </div>
+        <!-- 品牌LOGO -->
+        <div class="chop-block">
+        <div class="font">Clothing & Accessories</div>
+        <div class="logo">
+
+          <!--服裝熱門類別-->
+
+          <accessoriestype-item v-for="item in accessoriestypeitem" v-bind:todo="item" v-bind:key="item.id"></accessoriestype-item>
+
+          <!--服裝熱門類別end-->
+
+
+          </div>
+        <!-- 品牌一覽按鈕 -->
+        <div class="button brand-list"> <a href="https://www.chung-yo.com/Product/Division/2" target="_blank">更多商品</a> </div>
+      </div>
+      </div>
+    <!-- 服飾產品 -->
+    <div class="product-block">
+        <div class="commodity">
+        <div class="slick-block"> 
+            <!-- 服飾更新 -->
+
+            <accessories-item v-for="item in accessoriesitem" v-bind:todo="item" v-bind:key="item.id"></accessories-item>
+
+            <!-- 服飾更新 -end--> 
+          </div>
+      </div>
+      </div>
+    <div class="commodity-line"></div>
+  </div>
+    <!-- 男裝形象大圖-->
+    <div class="visualization" style="background-image: url('images/floor4/big_picture.jpg')"></div>
+  </div>
+
+<!-- 男裝 -->
+<div class="floor"> 
+    <!-- 手機形象圖 -->
+    <div class="floor-frame">
+    <div class="floor-images floor4-image" style="background-image: url('images/floor4/big_picture.jpg')"></div>
+  </div>
+    <!-- TAG -->
+    <div class="spacer" id="sport" data-index="toms keen protest native the89 sanuk converse toms keds crocodile NEW BALANCE 斐利 k-swiss bag to you cumar asicsbrooks columbia 哥倫比亞 crocsdesley 法國大使 fx creations jack wolfskin 飛狼 kedsk-swiss lacoste mlb native onitsuka tiger outdoor partake pony royal sperry 怡寶 旅行者 歐都納 山頂鳥 NIKE CROCS SKECHERS "></div>
+    <div class="sort">
+    <div class="sort-image"> <img src="images/floor4/image.jpg"> </div>
+    <div class="chop">
+        <div class="sort-line"></div>
+        <div class="sort-title">
+        <div class="umber">04</div>
+        <div class="title-name">休運/男裝</div>
+        <div class="tag"> <span>玩美機能時尚，陪您輕鬆打造完美曲線</span> </div>
+      </div>
+        <!-- 品牌LOGO -->
+        <div class="chop-block">
+        <div class="font">Sport & Men</div>
+        <div class="logo">
+        
+          <!--男裝熱門類別-->
+          <mensporttype-item v-for="item in mensporttypeitem" v-bind:todo="item" v-bind:key="item.id"></mensporttype-item>
+          <!--男裝熱門類別end-->
+
+          </div>
+        <!-- 品牌一覽按鈕 -->
+        <div class="button brand-list"> <a href="https://www.chung-yo.com/Product/Division/4" target="_blank">更多商品</a> </div>
+      </div>
+      </div>
+    <!-- 男裝產品 -->
+    <div class="product-block">
+        <div class="commodity">
+        <div class="slick-block"> 
+            <!-- 男裝更新 -->            
+
+            <mensport-item v-for="item in mensportitem" v-bind:todo="item" v-bind:key="item.id"></mensport-item>
+            
+            <!-- 男裝更新 -end--> 
+          </div>
+      </div>
+      </div>
+    <div class="commodity-line"></div>
+  </div>
+    <!-- 親子形象大圖-->
+    <div class="visualization" style="background-image: url('images/floor5/big_picture.jpg')"></div>
+  </div>
+
+<!-- 親子 -->
+<div class="floor"> 
+    <!-- 手機形象圖 -->
+    <div class="floor-frame">
+    <div class="floor-images floor5-image" style="background-image: url('images/floor5/big_picture.jpg')"></div>
+  </div>
+    <!-- TAG -->
+    <div class="spacer" id="kids" data-index="奇哥 施巴 f'ees 天鵝 roberta di camerino sloggi chiccof'ees 麗嬰房 奇哥 施巴 聖荃 Kinloch Anderson SKECHERS KIDS PIPPY 拼圖總動員 安妮公主"></div>
+    <div class="sort">
+    <div class="sort-image"> <img src="images/floor5/image.jpg"> </div>
+    <div class="chop">
+        <div class="sort-line"></div>
+        <div class="sort-title">
+        <div class="umber">05</div>
+        <div class="title-name">婦幼親子</div>
+        <div class="tag"> <span>時刻溫柔守護媽咪寶貝，豐富您的親子生活</span> </div>
+      </div>
+      <!-- 品牌LOGO -->
+      <div class="chop-block">
+        <div class="font">Kids & Baby</div>
+        <div class="logo">
+                   
+          <!--童裝熱門類別-->
+          <kidsbabytype-item v-for="item in kidsbabytypeitem" v-bind:todo="item" v-bind:key="item.id"></kidsbabytype-item>
+          <!--童裝熱門類別end-->
+
+          </div>
+        
+        <!-- 品牌一覽按鈕 -->
+        <div class="button brand-list"> <a href="https://www.chung-yo.com/Product/Division/5" target="_blank">更多商品</a> </div>
+      </div>
+
+      </div>
+    <!-- 親子產品 -->
+    <div class="product-block">
+        <div class="commodity">
+        <div class="slick-block"> 
+            
+            <!-- 童裝更新 -->
+
+            <kidsbaby-item v-for="item in kidsbabyitem" v-bind:todo="item" v-bind:key="item.id"></kidsbaby-item>
+            
+            <!-- 童裝更新 -end--> 
+            
+          </div>
+      </div>
+      </div>
+    <div class="commodity-line"></div>
+  </div>
+    <!-- 家用形象大圖-->
+    <div class="visualization" style="background-image: url('images/floor6/big_picture.jpg');display: none;"></div>
+  </div>
+
+  <!-- 內睡衣 -->
+<div class="floor"> 
+    <!-- 手機形象圖 -->
+    <div class="floor-frame" style="display: none;">
+    <div class="floor-images floor5-image" style="background-image: url('images/floor5/big_picture.jpg')"></div>
+  </div>
+    <!-- TAG -->
+    <div class="spacer" id="kids2" data-index="Aurdey奧黛莉,LADIES蕾黛絲,SAVVY莎薇,sloggi,SWEAR思薇爾,Triumph黛安芬 Modern Girl瑪登瑪朵 La Vie Aisee金華歌爾 SWEAR思薇爾 LADY ME"></div>
+    <div class="sort">
+    <div class="sort-image"> <img src="images/floor5/image2.jpg"> </div>
+    <div class="chop">
+        <div class="sort-line"></div>
+        <div class="sort-title">
+        <div class="umber">06</div>
+        <div class="title-name">內睡衣</div>
+        <div class="tag"> <span>展現自信優雅、魅力體態，分秒寵愛自己。</span> </div>
+      </div>
+      <!-- 品牌LOGO -->
+      <div class="chop-block">
+        <div class="font" style="height: 330px;">Underwear & Nightdress</div>
+        <div class="logo">
+           
+          <!--內睡衣熱門類別-->
+          <underweartype-item v-for="item in underweartypeitem" v-bind:todo="item" v-bind:key="item.id"></underweartype-item>
+          <!--內睡衣熱門類別end-->
+
+          </div>
+        
+        <!-- 品牌一覽按鈕 -->
+        <div class="button brand-list"> <a href="https://www.chung-yo.com/Product/CategoryL/2189" target="_blank">更多商品</a> </div>
+      </div>
+
+      </div>
+    <!-- 親子產品 -->
+    <div class="product-block">
+        <div class="commodity">
+        <div class="slick-block"> 
+            
+            <!-- 內睡衣更新 -->
+
+            <underwear-item v-for="item in underwearitem" v-bind:todo="item" v-bind:key="item.id"></underwear-item>
+            
+            <!-- 內睡衣更新 -end--> 
+            
+          </div>
+      </div>
+      </div>
+    <div class="commodity-line"></div>
+  </div>
+    <!-- 家用形象大圖-->
+    <div class="visualization" style="background-image: url('images/floor6/big_picture.jpg');"></div>
+  </div>
+
+<!-- 家用 -->
+<div class="floor"> 
+    <!-- 手機形象圖 -->
+    <div class="floor-frame">
+    <div class="floor-images floor6-image" style="background-image: url('images/floor6/big_picture.jpg')"></div>
+  </div>
+    <!-- TAG -->
+    <div class="spacer" id="homeneeds" data-index="樂鍋史蒂娜 生活工場 虎牌 伊萊克斯 香草集 tescom 3m inhouse 嘉儀 佳醫 飛利浦 象印 樂鍋史蒂娜 法國特福 均岱 kitchensping armada 永恆系列 1929 彼得兔 le creuset 法廚 ucom 益康屋 元艇 生活工場 阿原 yuan 科羅沙 鼎王鵝媽媽 嘉儀 tiger 虎牌 均岱 kitchingsping 睞上生活 蕾莉歐 菲仕樂 Panasonic 征利 Hengstyle恆隆行 怡眾國際 金安德森"></div>
+    <div class="sort">
+    <div class="sort-image"> <img src="images/floor6/image.jpg"> </div>
+    <div class="chop">
+        <div class="sort-line"></div>
+        <div class="sort-title">
+        <div class="umber">07</div>
+        <div class="title-name">3C/家用</div>
+        <div class="tag"> <span>打造智慧生活，為您的科技生活添加與眾不同的美感</span> </div>
+      </div>
+        <!-- 品牌LOGO -->
+        <div class="chop-block">
+        <div class="font">3C & HOME NEEDS</div>
+        <div class="logo">
+            
+          <!--家用熱門類別-->
+          <homeneedstype-item v-for="item in homeneedstypeitem" v-bind:todo="item" v-bind:key="item.id"></homeneedstype-item>
+          <!--家用熱門類別end-->
+
+          </div>
+        <!-- 品牌一覽按鈕 -->
+        <div class="button brand-list"> <a href="https://www.chung-yo.com/Product/Division/7" target="_blank">更多商品</a> </div>
+      </div>
+      </div>
+    <!-- 家用產品 -->
+    <div class="product-block">
+        <div class="commodity">
+        <div class="slick-block"> 
+            
+            <!-- 家用更新 -->
+
+            <homeneeds-item  v-for="item in homeneedsitem" v-bind:todo="item" v-bind:key="item.id"></homeneeds-item>
+          
+            <!-- 家用更新 -end--> 
+          </div>
+      </div>
+      </div>
+    <div class="commodity-line"></div>
+  </div>
+    <!-- 食品形象大圖-->
+    <div class="visualization" style="background-image: url('images/floor7/big_picture.jpg')"></div>
+  </div>
+
+<!-- 食品 -->
+<div class="floor"> 
+    <!-- 手機形象圖 -->
+    <div class="floor-frame">
+    <div class="floor-images floor7-image" style="background-image: url('images/floor7/big_picture.jpg')"></div>
+  </div>
+    <!-- TAG -->
+    <div class="spacer" id="food" data-index="奇華餅家 手信坊 美珍香 味芝坊 華齊堂 jasons 老行家 黑橋牌 阿華師 正官庄 godiva 北之特 樂銀GNC 美珍香 老行家 華陀扶元堂 華齊堂 長庚 生技 阿華師 GNC 蜜堂 大漢酵素 Diva Life 古典玫瑰園"></div>
+    <div class="sort">
+    <div class="sort-image"> <img src="images/floor7/image.jpg"> </div>
+    <div class="chop">
+        <div class="sort-line"></div>
+        <div class="sort-title">
+        <div class="umber">08</div>
+        <div class="title-name">食品/Jasons</div>
+        <div class="tag"> <span>品味時尚購物市場，提供當季蔬果、肉品新鮮食材與嚴選食品</span> </div>
+      </div>
+        <!-- 品牌LOGO -->
+        <div class="chop-block">
+        <div class="font">FOOD & JASONS</div>
+        <div class="logo">
+            
+          <!--食品熱門類別-->
+          <foodtype-item v-for="item in foodtypeitem" v-bind:todo="item" v-bind:key="item.id"></foodtype-item>
+          <!--食品熱門類別end-->
+
+          </div>
+        <!-- 品牌一覽按鈕 -->
+        <div class="button brand-list"> <a href="https://www.chung-yo.com/Product/CategoryL/2132" target="_blank">更多商品</a> </div>
+        <!-- 品牌一覽跳出視窗 -->
+        <div class="modal">
+            <div class="remove"> <img src="images/mcross.png"> </div>
+            <div class="title">品牌一覽</div>
+            <div class="category">
+            <div class="subtitle">食品/Jasons</div>
+            <div class="tag"> <a href="" class="modal-button">美珍香</a> <a href="" class="modal-button">阿華師</a> <a href="" class="modal-button">美珍香</a> <a href="" class="modal-button">阿華師</a> <a href="" class="modal-button">美珍香</a> <a href="" class="modal-button">阿華師</a> </div>
+          </div>
+          </div>
+      </div>
+      </div>
+    <!-- 食品產品 -->
+    <div class="product-block">
+        <div class="commodity">
+        <div class="slick-block"> 
+            <!-- 食品更新 -->
+      
+            <food-item v-for="item in fooditem" v-bind:todo="item" v-bind:key="item.id"></food-item>
+            
+            <!-- 食品更新 -end--> 
+          </div>
+      </div>
+      </div>
+    <div class="commodity-line"></div>
+  </div>
+  </div>
+</div>
+
+ 
+
+
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script> 
+<!-- 滾輪速度 --> 
+<!--<script src="js/jQuery.scrollSpeed.js" type="text/javascript"></script> --> 
+<!-- 運用在區塊出現 --> 
+<script src="js/wow.js" type="text/javascript"></script> 
+<!-- 滑動效果 --> 
+<script src="js/slick.js" type="text/javascript"></script> 
+<!-- 主要 --> 
+<script src="js/main.js" type="text/javascript"></script>
+<!-- 架構 -->
+<script src="js/type.js" type="text/javascript"></script>
+<!-- 商品修改資訊 --> 
+<script src="js/commodity.js" type="text/javascript"></script>
+
+</body>
+
+</html>
