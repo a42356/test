@@ -1,0 +1,197 @@
+@charset "utf-8";
+
+body {margin:0;}
+body, input, textarea, select, p, table, div {font-size:13px; color:#000; font-family:Arial;}
+dd, dt, dl, p, ul, li, ol, form, input, h1, h2, h3, h4, h5, h6 {margin:0; padding:0;}
+ul, ol, li {list-style-type:none; list-style-image:none;}
+h1, h2, h3, h4, h5, h6 {font-weight:normal; font-style:normal;}
+
+/* 
+   ----------------------------- */
+
+a {text-decoration:none; outline:none; transition:0.35s;}
+a:hover {text-decoration:none; transition:0.35s;}
+
+img {border:none;}
+
+/* 
+   ----------------------------- */
+
+#header {width:100%; background:#4d65a1; position:relative; z-index:999;}
+#header div {margin:0 auto; width:1180px; padding:0 20px; height:40px;}
+#header div a {float:left; color:#fff; font-family:微軟正黑體; font-size:13.5px; display:block;}
+#header div ul {margin:0; padding:10px 0 0 450px; color:#fff; font-size:13.5px;}
+#header div ul li {float:left; width:60px;}
+#header div a.mem {width:75px; height:25px; padding:5px 0 0 40px; margin:1px 15px 0 0; background:url(../images/header_mem.jpg) no-repeat; color:#4d65a1; font-weight:bold;}
+#header div a.fb {width:80px; height:25px; padding:5px 0 0 30px; margin:1px 0 0 0; background:url(../images/header_fb.jpg) no-repeat; color:#4d65a1; font-weight:bold;}
+
+#scroll {position:fixed; z-index:999; bottom:5%; right:2%; color:#000; border:1px solid #000; font-size:18px; padding:8px 15px; cursor:pointer;}
+#scroll:hover {color:#fff; background:#000;}
+
+.top {width:100%; height:680px; background:url(../images/index.jpg) top center no-repeat;}
+.top ul {width:1220px; height:680px; margin:0 auto; position:relative;}
+.top ul li {position:absolute; z-index:999; top:30px; left:440px;}
+.top ul li.mny {top:30px; left:725px;}
+.top ul li.mny2 {top:160px; left:950px;}
+.top ul li.mny3 {top:265px; left:335px;}
+.top ul li.mny4 {top:435px; left:115px;}
+.top ul li.mny5 {top:490px; left:1040px;}
+.top ul li.mny6 {top:600px; left:515px;}
+
+#nav {width:100%; height:90px; background:url(../images/nav.jpg) center no-repeat;}
+#nav .navs {width:1320px; margin:0 auto;}
+#nav .navs a {float:left; margin:30px 105px; width:120px; height:30px; text-align:center; font-size:22px; font-family:微軟正黑體; display:inline-block;}
+
+.run {
+	-webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+	color:#00b4ac;
+	transition:all .35s ease;
+	}
+.run:hover {
+	-webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
+	color:#e20000;
+	transition:all .35s ease;
+	}
+
+.wrapper {width:100%; background:#00b4ac; display:inline-block;}
+
+.card {width:1220px; margin:0 auto; padding:90px 0 0 0;}
+.card:after {content:""; display:block; clear:both;}
+.card h1 {margin:0 0 75px 0;}
+.card .bank {float:left; width:380px; height:425px; margin:0 40px 40px 0; background:#fff; position:relative;}
+.card .bank p {padding:20px 0 0 0; text-align:center; font-size:17px; color:#00b4ac; font-family:微軟正黑體; letter-spacing:0.02em;}
+.card .bank ul {margin:0; padding:10px 30px 20px 50px;}
+.card .bank ul li {list-style:decimal; font-size:16px; font-family:微軟正黑體; letter-spacing:0.02em; line-height:32px;}
+.card .bank ul li a {color:#e20000;}
+.card .bank span {position:absolute; bottom:0; width:380px; padding:20px 0; text-align:center; font-size:17px; font-family:微軟正黑體; background:#009b94; display:block; transition:all .35s ease;}
+.card .bank span:hover {background:#000; transition:all .35s ease;}
+.card .bank span a {color:#fff;}
+.card .banko {margin:0;}
+
+.point {width:1220px; margin:0 auto; padding:50px 0 0 0;}
+.point:after {content:""; display:block; clear:both;}
+.point h2 {margin:0 0 75px 0;}
+.point .title {width:1220px; height:70px; background:#e20000;}
+.point .title ul {padding:22px 0;}
+.point .title ul li {float:left; width:244px; text-align:center; font-size:18px; font-family:微軟正黑體; color:#fff; letter-spacing:0.02em;}
+.point .discount {width:1220px; background:#fff;}
+.point .discount ul {height:61px; border-bottom:1px solid #00b4ac;}
+.point .discount ul:hover {background:#dafffa;}
+.point .discount ul li {float:left; width:243px; padding:20px 0; text-align:center; font-size:16px; font-family:微軟正黑體; letter-spacing:0.02em; border-right:1px solid #00b4ac;}
+.point .discount ul li.no {border:0;}
+.point .ps {width:1220px;}
+.point .ps ul {padding:20px 0;}
+.point .ps ul li {list-style:inside decimal; color:#fff; font-size:16px; font-family:微軟正黑體; letter-spacing:0.02em; line-height:30px;}
+.point .ps ul span {color:#fff; font-size:16px; font-family:微軟正黑體; letter-spacing:0.02em; line-height:30px;}
+
+.stage {width:1220px; margin:0 auto; padding:50px 0 80px 0;}
+.stage:after {content:""; display:block; clear:both;}
+.stage h3 {margin:0 0 75px 0;}
+.stage .rate {float:left; width:380px; height:430px; margin:0 40px 40px 0; background:#fff;}
+.stage .rate p {padding:30px 26px; font-size:16px; font-family:微軟正黑體; letter-spacing:0.02em; line-height:36px;}
+.stage .rato {margin:0;}
+.stage .sgps {width:1220px; color:#fff; font-size:16px; font-family:微軟正黑體; letter-spacing:0.02em; line-height:30px; clear:both;}
+
+.footer {width:100%; background:#e8e8e8; clear:both;}
+.footer div {margin:0 auto; width:1220px; padding:20px 0; font-size:13px; font-family:Arial; text-align:center; letter-spacing:0.05em;}
+
+/* 
+   ----------------------------- */
+
+.box {width:1140px; margin:50px auto 0 auto; padding:40px; background:#fff; box-sizing:border-box;}
+.boxo {margin:50px auto;}
+.box h6 {height:75px; border-bottom:1px solid #00b4ac; margin:0 0 30px 0;}
+.box p {height:20px; padding:15px; background:#00b4ac; color:#fff; font-size:16px; font-family:微軟正黑體; letter-spacing:0.02em;}
+.box span {padding:20px 15px; font-size:15px; font-family:Arial, 微軟正黑體; letter-spacing:0.02em; line-height:28px; display:block;}
+.box span.down {padding:20px 0 0 15px;}
+.box span a {color:#e20000; text-decoration:underline;}
+.box span i {color:#e20000; font-style:normal;}
+.box ul {padding:20px 15px 20px 35px;}
+.box ul.up {padding:10px 15px 20px 35px;}
+.box ul.line {border-bottom:1px dashed #000;}
+.box ul li {list-style:decimal; font-size:15px; font-family:Arial, 微軟正黑體; letter-spacing:0.02em; line-height:28px;}
+.box ul li a {color:#e20000; text-decoration:underline;}
+.box ul li i {color:#e20000; font-style:normal;}
+.box ol {padding:2px 15px 2px 21px;}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+
+#header div {width:100%; padding:2px 5px;}
+#header div ul {display:none;}
+#header div a.mem {display:none;}
+#header div a.fb {display:none;}
+
+.top {width:100%; height:580px; background:url(../images/m_index.jpg) top center no-repeat;}
+.top ul {display:none;}
+
+#nav {height:68px; background:none #000;}
+#nav .navs {width:100%;}
+#nav .navs a {margin:22px 2.3%; height:20px; width:20%; font-size:17px;}
+
+.run {color:#fff;}
+.run:hover {
+	-webkit-transform: translateY(0);
+            transform: translateY(0);
+	color:#ffec01;
+	}
+
+.card {width:100%; padding:40px 0 0 0;}
+.card h1 {width:100%; height:85px; background:url(../images/m_tit.jpg) center center no-repeat; margin:0 0 45px 0;}
+.card h1 img {display:none;}
+.card .bank {float:none; width:100%; height:auto !important;}
+.card .bank img {width:100%;}
+.card .bank ul {padding:10px 30px 80px 50px;}
+.card .bank span {width:100%;}
+.card .banko {margin:0 0 40px 0;}
+
+.point {width:100%; padding:0;}
+.point h2 {width:100%; height:85px; background:url(../images/m_tit2.jpg) center center no-repeat; margin:0 0 45px 0;}
+.point h2 img {display:none;}
+.point .title {width:100%; height:65px;}
+.point .title ul {padding:15px 0;}
+.point .title ul li {width:25%; font-size:15px;}
+.point .title ul li.mno {display:none;}
+.point .discount {width:100%;}
+.point .discount ul {height:60px;}
+.point .discount ul li {width:24.6%; height:35px; padding:13px 0; font-size:14px;}
+.point .discount ul li.mno {display:none;}
+.point .ps {width:100%;}
+.point .ps ul {padding:10px 10px 10px 30px;}
+.point .ps ul li {list-style:decimal; font-size:15px;}
+.point .ps ul span {font-size:15px;}
+
+.stage {width:100%; padding:30px 0;}
+.stage h3 {width:100%; height:85px; background:url(../images/m_tit3.jpg) center center no-repeat; margin:0 0 60px 0;}
+.stage h3 img {display:none;}
+.stage .rate {width:100%; height:auto !important; margin:0 0 40px 0;}
+.stage .rate img {width:100%;}
+.stage .rate p {padding:20px 26px; font-size:15px;}
+.stage .sgps {width:100%; padding:0 15px; font-size:15px; box-sizing:border-box;}
+
+.box {width:100%; padding:5px 0;}
+.box h6 {margin:10px 10px 20px 10px;}
+.box span {padding:15px;}
+.box ul {padding:15px 15px 15px 40px;}
+
+.footer div {width:100%; font-size:12px;}
+
+}
+
+@media screen and (min-width: 414px) and (max-width: 480px) {
+
+.stage .rate p {padding:20px 35px; font-size:16px;}
+
+}
+
+@media screen and (max-width: 320px) {
+
+#nav {height:90px;}
+#nav .navs a {margin:20px 2.3%;}
+
+.card .bank ul li {line-height:30px;}
+
+.stage .rate p {padding:20px 10px; letter-spacing:0; font-size:15px;}
+
+}
